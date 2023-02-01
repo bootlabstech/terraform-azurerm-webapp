@@ -22,25 +22,25 @@ variable "web_app_name" {
 variable "kind" {
   type        = string
   description = "The kind of the App Service Plan to create. Possible values are Windows (also available as App), Linux, elastic (for Premium Consumption) and FunctionApp (for a Consumption Plan). Defaults to Windows."
-  default     = "Linux"
+  # default     = "Linux"
 }
 
 variable "reserved" {
   type        = bool
   description = " Is this App Service Plan Reserved. Defaults to false."
-  default     = true
+  default     = false
 }
 
 variable "sku_tier" {
   type        = string
   description = " Specifies the plan's pricing tier."
-  default     = "Standard"
+  # default     = "Standard"
 }
 
 variable "sku_size" {
   type        = string
   description = " Specifies the plan's instance size."
-  default     = "S1"
+  # default     = "S1"
 }
 
 variable "minimum_tls_version" {
