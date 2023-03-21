@@ -13,7 +13,7 @@ variable "location" {
 #   description = "name of the azurerm_app_service_plan"
 # }
 
-variable "web_app_name" {
+variable "name" {
   type        = string
   description = "name of the azurerm_linux_web_app"
 
