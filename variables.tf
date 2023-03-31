@@ -8,10 +8,10 @@ variable "location" {
   description = "location of the resource group"
 }
 
-# variable "appservice_name" {
-#   type        = string
-#   description = "name of the azurerm_app_service_plan"
-# }
+variable "app_command_line" {
+  type        = string
+  description = "name of the azurerm_app_service_plan"
+}
 
 variable "name" {
   type        = string

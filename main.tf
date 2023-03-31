@@ -19,5 +19,6 @@ resource "azurerm_linux_web_app" "web_app" {
 
   site_config {
     minimum_tls_version = var.minimum_tls_version
+    app_command_line = var.app_command_line
   }
 }
