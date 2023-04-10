@@ -8,10 +8,10 @@ variable "location" {
   description = "location of the resource group"
 }
 
-variable "app_command_line" {
-  type        = string
-  description = "name of the azurerm_app_service_plan"
-}
+# variable "app_command_line" {
+#   type        = string
+#   description = "name of the azurerm_app_service_plan"
+# }
 
 variable "name" {
   type        = string
@@ -43,11 +43,11 @@ variable "name" {
 #   # default     = "S1"
 # }
 
-variable "minimum_tls_version" {
-  type        = string
-  description = "(optional) describe your variable"
-  default     = "1.2"
-}
+# variable "minimum_tls_version" {
+#   type        = string
+#   description = "(optional) describe your variable"
+#   default     = "1.2"
+# }
 
 variable "service_plan_id" {
   type        = string

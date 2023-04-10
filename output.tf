@@ -3,5 +3,5 @@
 # }
 
 output "azurerm_linux_web_app" {
-  value = azurerm_linux_web_app.web_app
+  value = azurerm_windows_web_app.example.id
 }
