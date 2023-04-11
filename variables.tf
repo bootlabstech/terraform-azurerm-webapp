@@ -25,29 +25,29 @@ variable "name" {
 #   # default     = "Linux"
 # }
 
-# variable "reserved" {
-#   type        = bool
-#   description = " Is this App Service Plan Reserved. Defaults to false."
-#   default     = false
-# }
+variable "dotnet_version" {
+  type        = string
+  description = " Is this App Service Plan Reserved. Defaults to false."
+  default     = "v7.0"
+}
 
-# variable "sku_tier" {
-#   type        = string
-#   description = " Specifies the plan's pricing tier."
-#   # default     = "Standard"
-# }
+variable "current_stack" {
+  type        = string
+  description = " Specifies the plan's pricing tier."
+  # default     = "dotnet"
+}
 
-# variable "sku_size" {
-#   type        = string
-#   description = " Specifies the plan's instance size."
-#   # default     = "S1"
-# }
+variable "ftps_state" {
+  type        = string
+  description = " Specifies the plan's instance size."
+  default     = "FtpsOnly"
+}
 
-# variable "minimum_tls_version" {
-#   type        = string
-#   description = "(optional) describe your variable"
-#   default     = "1.2"
-# }
+variable "app_command_line" {
+  type        = string
+  description = "(optional) describe your variable"
+  default     = ""
+}
 
 variable "service_plan_id" {
   type        = string
