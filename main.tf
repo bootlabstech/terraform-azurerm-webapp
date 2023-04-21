@@ -34,7 +34,7 @@ resource "azurerm_windows_web_app" "example" {
     app_command_line = var.app_command_line
     application_stack {
       current_stack = var.current_stack
-      dotnet_version = var.dotnet_version
+      node_version = var.node_version
 
     }
 

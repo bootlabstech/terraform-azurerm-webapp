@@ -25,7 +25,7 @@ variable "name" {
 #   # default     = "Linux"
 # }
 
-variable "dotnet_version" {
+variable "node_version" {
   type        = string
   description = " Is this App Service Plan Reserved. Defaults to false."
   default     = "v7.0"
