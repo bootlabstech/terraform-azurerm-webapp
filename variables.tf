@@ -25,10 +25,10 @@ variable "name" {
 #   # default     = "Linux"
 # }
 
-variable "node_version" {
+variable "dotnet_version" {
   type        = string
   description = " Is this App Service Plan Reserved. Defaults to false."
-  default     = "v7.0"
+  default     = "6.0"
 }
 
 variable "current_stack" {
