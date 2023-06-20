@@ -25,10 +25,9 @@
     #   # default     = "Linux"
     # }
 
-    variable "dotnet_version" {
+    variable "stack_version" {
     type        = string
     description = " Is this App Service Plan Reserved. Defaults to false."
-    default     = "6.0"
     }
 
     variable "current_stack" {
