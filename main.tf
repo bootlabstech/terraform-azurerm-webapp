@@ -32,12 +32,53 @@ resource "azurerm_windows_web_app" "example" {
   site_config {
     ftps_state = var.ftps_state
     app_command_line = var.app_command_line
-    application_stack {
-      current_stack = var.current_stack
-      dotnet_version = var.dotnet_version
-
+     dynamic "application_stack" {
+      for_each = var.current_stack == "dotnet" ? [1] : []
+      content {
+        dotnet_version = var.stack_version
+      }
+      
+      
     }
 
+    dynamic "application_stack" {
+      for_each = var.current_stack == "node" ? [1] : []
+      content {
+        node_version = var.stack_version
+      }
+    }
+    dynamic "application_stack" {
+      for_each = var.current_stack == "php" ? [1] : []
+      content {
+        php_version = var.stack_version
+      }
+    }
+    dynamic "application_stack" {
+      for_each = var.current_stack == "java" ? [1] : []
+      content {
+        java_version = var.stack_version
+      }
+    }
+    dynamic "application_stack" {
+      for_each = var.current_stack == "python" ? [1] : []
+      content {
+        python_version = var.stack_version
+      }
+    }
+    dynamic "application_stack" {
+      for_each = var.current_stack == "ruby" ? [1] : []
+      content {
+        ruby_version = var.stack_version
+      }
+    }
+    dynamic "application_stack" {
+      for_each = var.current_stack == "go" ? [1] : []
+      content {
+        go_version = var.stack_version
+      }
+    }
   }
 }
+
+  
 
