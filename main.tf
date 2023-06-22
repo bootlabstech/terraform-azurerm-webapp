@@ -35,46 +35,36 @@ resource "azurerm_windows_web_app" "example" {
      dynamic "application_stack" {
       for_each = var.current_stack == "dotnet" ? [1] : []
       content {
+        current_stack = var.current_stack
         dotnet_version = var.stack_version
       }
-      
-      
     }
-
     dynamic "application_stack" {
       for_each = var.current_stack == "node" ? [1] : []
       content {
+        current_stack = var.current_stack
         node_version = var.stack_version
       }
     }
     dynamic "application_stack" {
       for_each = var.current_stack == "php" ? [1] : []
       content {
+        current_stack = var.current_stack
         php_version = var.stack_version
       }
     }
     dynamic "application_stack" {
       for_each = var.current_stack == "java" ? [1] : []
       content {
+        current_stack = var.current_stack
         java_version = var.stack_version
       }
-    }
+    } 
     dynamic "application_stack" {
-      for_each = var.current_stack == "python" ? [1] : []
+      for_each = var.current_stack == "dotnet_core" ? [1] : []
       content {
-        python_version = var.stack_version
-      }
-    }
-    dynamic "application_stack" {
-      for_each = var.current_stack == "ruby" ? [1] : []
-      content {
-        ruby_version = var.stack_version
-      }
-    }
-    dynamic "application_stack" {
-      for_each = var.current_stack == "go" ? [1] : []
-      content {
-        go_version = var.stack_version
+        current_stack = var.current_stack
+        dotnet_core_version = var.stack_version
       }
     }
   }
