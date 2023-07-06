@@ -1,55 +1,70 @@
-    variable "resource_group_name" {
-    type        = string
-    description = "name of the resource group"
-    }
+variable "name" {
+    type = string
+    description = "value"
+  
+}
+variable "resource_group_name" {
+    type = string
+    description = "value"
+  
+}
+variable "location" {
+    type = string
+    description = "value"
+  
+}
+variable "service_plan_id" {
+    type = string
+    description = "value"
+  
+}
+variable "application_stack" {
+    description = "value"
+    type = bool
+    default = true
+  
+}
+variable "current_stack" {
+    type = string
+    description = "value"
+}
 
-    variable "location" {
-    type        = string
-    description = "location of the resource group"
-    }
+variable "stack_version" {
+    type = string
+    description = "value"
+}
 
-    # variable "app_command_line" {
-    #   type        = string
-    #   description = "name of the azurerm_app_service_plan"
-    # }
+variable "ftps_state" {
+  type        = string
+  description = " Specifies the plan's instance size."
+  default     = "FtpsOnly"
+}
 
-    variable "name" {
-    type        = string
-    description = "name of the azurerm_linux_web_app"
+variable "app_command_line" {
+  type        = string
+  description = "(optional) describe your variable"
+  default     = ""
+}
+variable "outbound" {
+  type        = bool
+  description = " Is this App Service Plan Reserved. Defaults to false."
+  default = true
 
-    }
+}
+# variable "vnet_route_all_enabled" {
+#   type        = bool
+#   description = " Is this App Service Plan Reserved. Defaults to false."
 
-    # variable "kind" {
-    #   type        = string
-    #   description = "The kind of the App Service Plan to create. Possible values are Windows (also available as App), Linux, elastic (for Premium Consumption) and FunctionApp (for a Consumption Plan). Defaults to Windows."
-    #   # default     = "Linux"
-    # }
+# }
 
-    variable "stack_version" {
-    type        = string
-    description = " Is this App Service Plan Reserved. Defaults to false."
-    }
+variable "java_server" {
+  type = string
+  description = "docker image" 
+  default = "JAVA" 
+}
 
-    variable "current_stack" {
-    type        = string
-    description = " Specifies the plan's pricing tier."
-    # default     = "dotnet"
-    }
-
-    variable "ftps_state" {
-    type        = string
-    description = " Specifies the plan's instance size."
-    default     = "FtpsOnly"
-    }
-
-    variable "app_command_line" {
-    type        = string
-    description = "(optional) describe your variable"
-    default     = ""
-    }
-
-    variable "service_plan_id" {
-    type        = string
-    description = "(optional) describe your variable"
-
-    }
+variable "docker_image_tag" {
+  type = string
+  description = "Tag for docker image"
+  default = "latest"
+}
