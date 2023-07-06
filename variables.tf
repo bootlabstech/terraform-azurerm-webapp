@@ -45,12 +45,12 @@ variable "app_command_line" {
   description = "(optional) describe your variable"
   default     = ""
 }
-variable "outbound" {
-  type        = bool
-  description = " Is this App Service Plan Reserved. Defaults to false."
-  default = true
+# variable "outbound" {
+#   type        = bool
+#   description = " Is this App Service Plan Reserved. Defaults to false."
+#   default = true
 
-}
+# }
 # variable "vnet_route_all_enabled" {
 #   type        = bool
 #   description = " Is this App Service Plan Reserved. Defaults to false."
